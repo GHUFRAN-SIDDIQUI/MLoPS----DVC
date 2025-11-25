@@ -7,6 +7,12 @@ data = { 'Name':['Alice', 'Bob', 'Charlie', 'David'],
 
 df = pd.DataFrame(data)
 
+#Adding a new row to the DataFrame
+new_row_loc = {'Name' : 'Eve', 'Age': 29, 'City': 'San Francisco'}
+df.loc[len(df)] = new_row_loc
+
+
+
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
 
